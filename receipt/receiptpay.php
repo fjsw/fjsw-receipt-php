@@ -1,7 +1,7 @@
 <?php
 require_once('protocol.php');
 
-class Receipt
+class ReceiptPay
 {
 	private $appid = "";
 	private $protocol = null;

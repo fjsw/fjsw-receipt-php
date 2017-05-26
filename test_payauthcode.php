@@ -1,5 +1,5 @@
 <?php
-require_once('shuwang/receipt.php');
+require_once('shuwang/receiptpay.php');
 header("Content-Type:text/html;charset=utf-8");
 
 $config = array(
@@ -8,8 +8,8 @@ $config = array(
 	"urlapis" => $_POST["urlapis"]
 );
 // 发起授权码支付
-$receipt = new Receipt($config);
-$result = $receipt->payAuthcode(
+$receiptpay = new ReceiptPay($config);
+$result = $receiptpay->payAuthcode(
 	$_POST["merchid"], $_POST["amount"], $_POST["authcode"], 
 	$_POST["shopid"], $_POST["userid"], $_POST["devid"], 
 	$_POST["orderid"], $_POST["orderinfo"], $_POST["attach"]
