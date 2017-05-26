@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>聚收米公众号/服务窗支付测试</title>
+</head>
+<body>
+
+<form action="test_payjsapi.php" method="post" autocomplete="on">
+应用编号<span style="color:Red">*</span>: <input type="text" name="appid" required="required" /><br />
+应用密钥<span style="color:Red">*</span>: <input type="text" name="appsecret" required="required" /><br />
+接口网关<span style="color:Red">*</span>: <input type="text" name="urlapis" value="http://api.test.shuwang.info/receipt/rest" required="required" /><br />
+<hr /><br />
+商户编号<span style="color:Red">*</span>: <input type="text" name="merchid" value="1484901323" required="required" /><br />
+付款金额<span style="color:Red">*</span>: <input type="text" name="amount" value="1" required="required" />分(单位分)<br />
+<hr /><br />
+微信公众号APPID: <input type="text" name="subAppId" />公众号支付必填<br />
+微信用户OPENID: <input type="text" name="subOpenId" />公众号支付必填<br />
+<hr /><br />
+支付宝用户USERID: <input type="text" name="userId" />服务窗支付必填<br />
+<hr /><br />
+支付完成跳转: <input type="text" name="redirectUrl" /><br />
+订单编号: <input type="text" name="orderId" /><br />
+订单信息: <input type="text" name="orderInfo" value="聚收米JSAPI支付测试" /><br />
+备注信息: <input type="text" name="remark" /><br />
+附加信息: <input type="text" name="attach" /><br />
+<input type="submit" />
+</form>
+
+</body>
+</html>

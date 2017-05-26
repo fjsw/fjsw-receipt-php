@@ -1,5 +1,5 @@
 <?php
-require_once('shuwang/receiptpay.php');
+require_once('receipt/receiptpay.php');
 header("Content-Type:text/html;charset=utf-8");
 
 $config = array(

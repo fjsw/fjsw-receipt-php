@@ -28,5 +28,42 @@ class ReceiptPay
 		//
 		return $this->protocol->callMethod($params);
 	}
+	
+	public function payWxJsapi($merchid, $amount, $subAppId, $subOpenId, 
+	$orderId, $orderInfo, $redirectUrl, $remark, $attach) {
+		$params = array(
+			'method' => 'receipt.scan.jsapi',
+			'merchid' => $merchid,
+			'tradeType' => 2,
+			'amount' => $amount,
+			'outTradeNo' => $orderId,
+			'orderInfo' => $orderInfo,
+			'subAppId' => $subAppId,
+			'subOpenId' => $subOpenId,
+			'redirectUrl' => $redirectUrl,
+			'remark' => $remark,
+			'attach' => $attach
+		);
+		//
+		return $this->protocol->callMethod($params);
+	}
+	
+	public function payAliJsapi($merchid, $amount, $userId, 
+	$orderId, $orderInfo, $redirectUrl, $remark, $attach) {
+		$params = array(
+			'method' => 'receipt.scan.jsapi',
+			'merchid' => $merchid,
+			'tradeType' => 1,
+			'amount' => $amount,
+			'outTradeNo' => $orderId,
+			'orderInfo' => $orderInfo,
+			'userId' => $userId,
+			'redirectUrl' => $redirectUrl,
+			'remark' => $remark,
+			'attach' => $attach
+		);
+		//
+		return $this->protocol->callMethod($params);
+	}
 }
 ?>
